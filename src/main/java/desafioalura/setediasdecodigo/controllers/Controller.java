@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import desafioalura.setediasdecodigo.models.Filme;
+import segundodia.FormatarString;
 import segundodia.ListaParseia;
 
 @RestController
@@ -31,7 +32,7 @@ public class Controller {
 			nova.add(filme.getTitle());
 		}
 
-		return nova.toString();
+		return FormatarString.formatarTitulo(nova.toString());
 	}
 	
 	@GetMapping(path = "/imagem")
@@ -42,7 +43,7 @@ public class Controller {
 			nova.add(filme.getImage());
 		}
 				
-		return nova.toString();
+		return FormatarString.formatarImagem(nova.toString());
 		
 	}
 }

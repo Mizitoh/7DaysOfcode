@@ -2,15 +2,15 @@ package desafioalura.setediasdecodigo.models;
 
 public class Filme {
 
-	private String id;
-	private String rank;
-	private String title;
-	private String fullTitle;
-	private String year;
-	private String image;
-	private String crew;
-	private String imDbRating;
-	private String imDbRatingCount;
+	private final String id;
+	private final String rank;
+	private final String title;
+	private final String fullTitle;
+	private final String year;
+	private final String image;
+	private final String crew;
+	private final String imDbRating;
+	private final String imDbRatingCount;
 
 	public Filme(String id, String rank, String title, String fullTitle, String year, String image, String crew,
 			String imDbRating, String imDbRatingCount) {

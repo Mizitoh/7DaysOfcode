@@ -1,8 +1,9 @@
-package segundodia;
+package desafioalura.setediasdecodigo.views;
 
 import java.util.List;
 
 import  desafioalura.setediasdecodigo.models.Filme;
+import segundodia.ListaParseia;
 
 public class ImprimeTituloEImagemConsole {
 

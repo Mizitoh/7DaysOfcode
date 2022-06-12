@@ -1,0 +1,5 @@
+O desafio do terceiro dia era criar uma classe para
+criar o objeto filme e atribuir os valores do json
+pra esse objeto. Acabou que fiz isso no dia dois.
+
+https://github.com/Mizitoh/7DaysOfcode/blob/master/src/main/java/desafioalura/setediasdecodigo/models/Filme.java

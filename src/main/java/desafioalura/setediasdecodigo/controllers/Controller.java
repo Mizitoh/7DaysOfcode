@@ -20,13 +20,13 @@ public class Controller {
 	
 	@GetMapping
 	public List<Filme> exibeJson() throws Exception {
-		List<Filme> filmes = lista.getTodosOsDados(lista.carregaListagem());	
+		List<Filme> filmes = lista.getTodosOsDados(lista.parseString());	
 		return filmes;
 	}
 	
 	@GetMapping(path = "/titulo")
 	public String exibeTitulo() throws Exception {
-		List<Filme> filmes = lista.getTodosOsDados(lista.carregaListagem());
+		List<Filme> filmes = lista.getTodosOsDados(lista.parseString());
 		List<String> nova = new ArrayList<>();
 		for (Filme filme : filmes) {
 			nova.add(filme.getTitle());
@@ -37,12 +37,12 @@ public class Controller {
 	
 	@GetMapping(path = "/imagem")
 	public String exibeImagem() throws Exception {
-		List<Filme> filmes = lista.getTodosOsDados(lista.carregaListagem());
+		List<Filme> filmes = lista.getTodosOsDados(lista.parseString());
 		List<String> nova = new ArrayList<>();
 		for (Filme filme : filmes) {
 			nova.add(filme.getImage());
 		}
-				
+						
 		return FormatarString.formatarImagem(nova.toString());
 		
 	}

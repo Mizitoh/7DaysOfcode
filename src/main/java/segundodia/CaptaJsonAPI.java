@@ -11,8 +11,9 @@ import java.net.http.HttpResponse.BodyHandlers;
 
 public class CaptaJsonAPI {
 	
-	public String captaJson() throws Exception {
+	public String captaJson() {
 
+		try {
 		FileInputStream url = new FileInputStream("url.txt");
 		InputStreamReader converte = new InputStreamReader(url);
 		@SuppressWarnings("resource")
@@ -26,5 +27,11 @@ public class CaptaJsonAPI {
 		response.body();
 
 		return response.body();
+		
+		} catch (Exception e) {
+			e.printStackTrace();
+			System.out.println("Erro ao captar Json do IMDB" + e);	
+			return null;
+		}
 	}
 }

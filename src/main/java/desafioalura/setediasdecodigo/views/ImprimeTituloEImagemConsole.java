@@ -10,7 +10,7 @@ public class ImprimeTituloEImagemConsole {
 	public static void main(String[] args) throws Exception {
 		
 		ListaParseia lista = new ListaParseia();
-		String listagem = lista.carregaListagem();
+		String listagem = lista.parseString();
 		
 		List<Filme> filmes = lista.getTodosOsDados(listagem);
 

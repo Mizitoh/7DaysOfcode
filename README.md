@@ -13,6 +13,8 @@ Desafio de 7 dias de código da Alura
 
 3° Criar um objeto Filme e mapear. Acabei fazendo no dia dois.
 
+4° Carregar dados numa página HTML.
+
 # Funcionalidades
 
 Até agora estamos consumnindo uma API.
@@ -22,6 +24,7 @@ Até agora estamos consumnindo uma API.
 Opto pelo construtor padrão em vez dos set que foram criados no dia 2 por não ver a necessecidade de criar sets nesse momento.
 Por esse motivo o objeto agora é imutavel.
 Quanto a ser interfacetado, não soube responder no momento.
+No quarto dia a maior dificuldade ficou em formatar a tabela.
 
 # Tecnologias utilizadas:
 
@@ -29,6 +32,8 @@ Quanto a ser interfacetado, não soube responder no momento.
 * Spring 
 * Padrão MVC
 * Eclipse
+* Thymeleaf
+* Bootstrap
 
 <hr>
 

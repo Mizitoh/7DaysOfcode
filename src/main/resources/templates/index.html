@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<link rel="stylesheet" type="text/css"
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css">
+<meta charset="UTF-8">
+<title>Todos os Títulos</title>
+</head>
+<body>	
+	<table class="table table-dark">
+  <thead>
+    <tr>
+      <th scope="col"  align="center" colspan="7"><p align="center">250 Melhores Filmes</p></th>
+    </tr>
+  </thead>
+  <tbody th:each="filmes : ${listaDeFilmes}">
+    <tr>
+      <td align="center" colspan="7" th:text="${filmes.title}"></td>
+    </tr>
+    <tr>
+      <td align="center" colspan="7"><img th:src="${filmes.image}" height="540" width="320"></td>
+    </tr>
+    <tr>
+      <th scope="row"></th>
+      <td align="right" rowspan="2">Ano: </td>
+      <td align="left" th:text="${filmes.year}"></td>
+      <td align="right">Nota:</td>
+      <td align="left" th:text="${filmes.imDbRating}"></td>
+      <td align="right">Ranking:</td>
+      <td align="left" th:text="${filmes.rank}"></td>
+    </tr>
+  </tbody>
+</table>
+</body>
+</html>

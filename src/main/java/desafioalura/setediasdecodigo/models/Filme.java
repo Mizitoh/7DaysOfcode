@@ -1,14 +1,21 @@
 package desafioalura.setediasdecodigo.models;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class Filme {
 
 	private final String id;
+	@JsonProperty("rank")
 	private final String rank;
+	@JsonProperty("title")
 	private final String title;
 	private final String fullTitle;
+	@JsonProperty("year")
 	private final String year;
+	@JsonProperty("image")
 	private final String image;
 	private final String crew;
+	@JsonProperty("imDbRating")
 	private final String imDbRating;
 	private final String imDbRatingCount;
 

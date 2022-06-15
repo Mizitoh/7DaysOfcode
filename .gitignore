@@ -31,5 +31,5 @@ build/
 
 ### VS Code ###
 .vscode/
-url.txt/
-jsonIMDS.json
+url.txt
+url2.txt

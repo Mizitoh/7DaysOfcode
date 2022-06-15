@@ -11,21 +11,18 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
 import desafioalura.setediasdecodigo.models.Filme;
-import segundodia.CaptaJsonAPI;
+import quintoEsextodia.OpcaoAPI;
 import segundodia.FormatarString;
-import segundodia.ListaParseia;
+import segundodia.ListaFilmes;
 
 @Controller
 @RestController
 @RequestMapping
 public class FilmeController {
 	
-
-	ListaParseia lista = new ListaParseia();
-	
 	@GetMapping
 	public ModelAndView getList() throws Exception{
-		List<Filme> filmes = lista.getTodosOsDados(lista.parseString());	
+		List<Filme> filmes = new ListaFilmes().getTodosOsDados(OpcaoAPI.FILMES_250_URL1.parseString());	
 		
 		ModelAndView mv = new ModelAndView("index");
 		mv.addObject("listaDeFilmes", filmes);
@@ -33,15 +30,19 @@ public class FilmeController {
 		return mv;
 	}
 	
-	@GetMapping(path = "/json")
-	public List<Filme> exibeJson() throws Exception {
-		List<Filme> filmes = lista.getTodosOsDados(lista.parseString());	
-		return filmes;
+	@GetMapping(path = "/arquivo2")
+	public ModelAndView getArquivo() throws Exception{
+		List<Filme> filmes = new ListaFilmes().getTodosOsDados(OpcaoAPI.FILMES_250_URL2.parseString());	
+		
+		ModelAndView mv = new ModelAndView("index");
+		mv.addObject("listaDeFilmes", filmes);
+				
+		return mv;
 	}
-	
+		
 	@GetMapping(path = "/titulo")
 	public String exibeTitulo(Model model) throws Exception {
-		List<Filme> filmes = lista.getTodosOsDados(lista.parseString());
+		List<Filme> filmes = new ListaFilmes().getTodosOsDados(OpcaoAPI.FILMES_250_URL2.parseString());
 		List<String> nova = new ArrayList<>();
 		for (Filme filme : filmes) {
 			nova.add(filme.getTitle());
@@ -52,7 +53,7 @@ public class FilmeController {
 	
 	@GetMapping(path = "/imagem")
 	public String exibeImagem() throws Exception {
-		List<Filme> filmes = lista.getTodosOsDados(lista.parseString());
+		List<Filme> filmes = new ListaFilmes().getTodosOsDados(OpcaoAPI.FILMES_250_URL1.parseString());
 		List<String> nova = new ArrayList<>();
 		for (Filme filme : filmes) {
 			nova.add(filme.getImage());

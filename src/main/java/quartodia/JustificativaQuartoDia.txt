@@ -1,0 +1,1 @@
+Em vez de fazer a classe gerando o HTML, usei thymeleaf com bootstrap.

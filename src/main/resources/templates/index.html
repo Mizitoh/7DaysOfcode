@@ -6,30 +6,50 @@
 <meta charset="UTF-8">
 <title>Todos os Títulos</title>
 </head>
-<body>	
-	<table class="table table-dark">
-  <thead>
-    <tr>
-      <th scope="col"  align="center" colspan="7"><p align="center">250 Melhores Filmes</p></th>
-    </tr>
-  </thead>
-  <tbody th:each="filmes : ${listaDeFilmes}">
-    <tr>
-      <td align="center" colspan="7" th:text="${filmes.title}"></td>
-    </tr>
-    <tr>
-      <td align="center" colspan="7"><img th:src="${filmes.image}" height="540" width="320"></td>
-    </tr>
-    <tr>
-      <th scope="row"></th>
-      <td align="right" rowspan="2">Ano: </td>
-      <td align="left" th:text="${filmes.year}"></td>
-      <td align="right">Nota:</td>
-      <td align="left" th:text="${filmes.imDbRating}"></td>
-      <td align="right">Ranking:</td>
-      <td align="left" th:text="${filmes.rank}"></td>
-    </tr>
-  </tbody>
-</table>
+<body class="p-3 mb-2 bg-dark text-white">
+	<header>
+		<h1 align="center">250 Melhores Filmes Segundo IMDB</h1>
+	</header>
+	<div class="p-3 mb-2 bg-secondary text-white">
+		<div class="row">
+			<div class="col"></div>
+			<div class="col">
+				<table class="table table-dark">
+					<thead>
+						<tr>
+							<th scope="col" align="center" colspan="2"><p align="center">Títulos por Ranking</p></th>
+						</tr>
+					</thead>
+					<tbody th:each="filmes : ${listaDeFilmes}">
+						<tr>
+							<td align="center" colspan="2" th:text="${filmes.title}"></td>
+						</tr>
+						<tr>
+							<td align="center" colspan="2"><img th:src="${filmes.image}"
+								height="200" width="120"></td>
+						</tr>
+						<tr>
+							<td align="right" rowspan="4">
+							Posição no ranking:<br><br>
+							Ano de Produção:<br><br>
+							Nota:<br><br>
+							</td>
+							<td align="left" th:text="${filmes.rank}"></td>
+						</tr>
+						<tr>
+							<td align="left" th:text="${filmes.year}"></td>
+						</tr>
+						<tr>
+							<td align="left" th:text="${filmes.imDbRating}"></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="col"></div>
+		</div>
+	</div>
+	<footer>
+		<h6 align="right">Desenvolvido por Michael De Oliveira</h6>
+	</footer>
 </body>
 </html>

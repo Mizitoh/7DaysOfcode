@@ -7,7 +7,7 @@ import org.json.*;
 
 import desafioalura.setediasdecodigo.models.Filme;
 
-public class ListaParseia {
+public class ListaFilmes {
 
 	public List<Filme> getTodosOsDados(String jsonString) {
 
@@ -31,19 +31,6 @@ public class ListaParseia {
 				String imDbRating = json_data.getString("imDbRating");
 				String imDbRatingCount = json_data.getString("imDbRatingCount");
 				filme = new Filme(id, rank, title, fullTitle, year, image, crew, imDbRating, imDbRatingCount);
-				/*
-				 * Feito antes com set
-				 * 
-				 * filme.setId(json_data.getString("id"));
-				 * filme.setRank(json_data.getString("rank"));
-				 * filme.setTitle(json_data.getString("title"));
-				 * filme.setFullTitle(json_data.getString("fullTitle"));
-				 * filme.setYear(json_data.getString("year"));
-				 * filme.setImage(json_data.getString("image"));
-				 * filme.setCrew(json_data.getString("crew"));
-				 * filme.setImDbRating(json_data.getString("imDbRating"));
-				 * filme.setImDbRatingCount(json_data.getString("imDbRatingCount"));
-				 */
 
 				filmes.add(filme);
 			}
@@ -52,11 +39,5 @@ public class ListaParseia {
 			System.out.println("Erro no parsing do JSON" + e);
 		}
 		return filmes;
-	}
-
-	public String parseString() throws Exception {
-		CaptaJsonAPI json = new CaptaJsonAPI();
-		String string = json.captaJson();
-		return string;
 	}
 }

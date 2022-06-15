@@ -15,6 +15,10 @@ Desafio de 7 dias de código da Alura
 
 4° Carregar dados numa página HTML.
 
+5° Encapsular classes.
+
+6° Usar mais de uma API.
+
 # Funcionalidades
 
 Até agora estamos consumnindo uma API.
@@ -25,6 +29,10 @@ Opto pelo construtor padrão em vez dos set que foram criados no dia 2 por não 
 Por esse motivo o objeto agora é imutavel.
 Quanto a ser interfacetado, não soube responder no momento.
 No quarto dia a maior dificuldade ficou em formatar a tabela.
+Foram alteradas diversar classes e o layout do HTML, deixando o código mais limpo e fácil de dar manutenção. 
+Ainda penso que posso melhorar o controlador.
+Adiantei o dia seis criando um Enum (baseado no padrão method template) que seleciona e altera o método de carregar e parsear 
+de acordo com os diferentes arquivos txt onde guardei minhas chaves.
 
 # Tecnologias utilizadas:
 
@@ -43,4 +51,5 @@ No quarto dia a maior dificuldade ficou em formatar a tabela.
 
 <img src ="https://github.com/Mizitoh/codeimages/blob/master/7daysofcodeConsole.png" width = 40%> <img src ="https://github.com/Mizitoh/codeimages/blob/master/7daysofcodeJson.png" width = 40%> 
 <img src ="https://github.com/Mizitoh/codeimages/blob/master/7daysofcodeTituloString.png" width = 25%> <img src ="https://github.com/Mizitoh/codeimages/blob/master/7daysofcodeUrlImageString.png" width = 70% padding = 10>
+<img src = "https://github.com/Mizitoh/codeimages/blob/master/7daysofcodeHTML.png" width = 100% padding = 10>
 

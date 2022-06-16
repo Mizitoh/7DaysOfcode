@@ -53,8 +53,8 @@ com uso de Comparable.
 
 <hr>
 
-<img src = "https://github.com/Mizitoh/codeimages/blob/master/7daysofcodeFinal.png" width = 100% padding = 10>
 <img src ="https://github.com/Mizitoh/codeimages/blob/master/7daysofcodeConsole.png" width = 40%> <img src ="https://github.com/Mizitoh/codeimages/blob/master/7daysofcodeJson.png" width = 40%> 
 <img src ="https://github.com/Mizitoh/codeimages/blob/master/7daysofcodeTituloString.png" width = 25%> <img src ="https://github.com/Mizitoh/codeimages/blob/master/7daysofcodeUrlImageString.png" width = 70% padding = 10>
 <img src = "https://github.com/Mizitoh/codeimages/blob/master/7daysofcodeHTML.png" width = 100% padding = 10>
+<img src = "https://github.com/Mizitoh/codeimages/blob/master/7daysofcodeFinal.png" width = 100%>
 

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<link rel="stylesheet" type="text/css"
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css">
+<meta charset="UTF-8">
+<title>Todos os Títulos</title>
+</head>
+<body class="p-3 mb-2 bg-dark text-white">
+	<header>
+		<h1 align="center">250 Melhores Filmes Segundo IMDB</h1>
+	</header>
+	<div class="p-3 mb-2 bg-secondary text-white">
+		<div class="row">
+			<div class="col">
+			<form action='#' th:action="@{/arquivo2}" th:object="${listaDeFilmes}" method="get">
+			<label>Lista 2 Inversa</label>
+			<br>
+			<input type="submit" value="Exibir"> 
+			<hr>
+			</form>
+			<form action='#' th:action="@{/pesquisarank}" th:object="${filme}" method="post">
+			<label>Pequisar por Rank</label>
+			<input name="pesquisarank">
+			<input type="submit" value="Buscar"> 
+			<hr>
+			</form>	
+			<form action='#' th:action="@{/pesquisatitulo}" th:object="${filmes}" method="post">
+			<label>Pequisar por Título</label>
+			<br>
+			<input name="pesquisatitulo">
+			<input type="submit" value="Buscar"> 
+			</form>	
+			</div>
+			<div class="col">
+				<table class="table table-dark">
+					<thead>
+						<tr>
+							<th scope="col" align="center" colspan="2"><p align="center">Títulos por Ranking</p></th>
+						</tr>
+					</thead>
+					<tbody> <!--  th:each="filmes : ${listaDeFilmes}">-->
+						<tr>
+							<td align="center" colspan="2" th:text="titulo">titulo</td>
+						</tr>
+						<tr>
+							<td align="center" colspan="2"><img th:src="imagem"
+								height="200" width="120"></td>
+						</tr>
+						<tr>
+							<td align="right" rowspan="4">
+							Posição no ranking:<br><br>
+							Ano de Produção:<br><br>
+							Nota:<br><br>
+							</td>
+							<td align="left" th:text="rank"></td>
+						</tr>
+						<tr>
+							<td align="left" th:text="ano"></td>
+						</tr>
+						<tr>
+							<td align="left" th:text="nota"></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="col">
+			<form action='http://localhost:8080'>
+				<br>
+				<input type="submit" value="Página Principal"> 
+					<br>
+					<hr>
+				</form>
+			</div>
+		</div>
+	</div>
+	<footer>
+		<h6 align="right">Desenvolvido por Michael De Oliveira</h6>
+	</footer>
+</body>
+</html>

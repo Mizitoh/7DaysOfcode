@@ -6,8 +6,9 @@ import java.util.List;
 import org.json.*;
 
 import desafioalura.setediasdecodigo.models.Filme;
+import setimodia.ContentJson;
 
-public class ListaFilmes {
+public class ListaConteudos implements ContentJson{
 
 	public List<Filme> getTodosOsDados(String jsonString) {
 

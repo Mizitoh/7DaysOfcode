@@ -1,6 +1,11 @@
 package segundodia;
 
-public class FormatarString {
+import java.util.List;
+import java.util.stream.Collectors;
+
+import desafioalura.setediasdecodigo.models.Filme;
+
+public class FilmesRepository {
 
 
 	public static String formatarImagem(String string) {
@@ -23,6 +28,17 @@ public class FormatarString {
 			retorno += formatados[i] + "<br><br>";
 		}
 		return retorno;
+	}
+	
+	public static List<Filme> captaPorRank(List<Filme> filme, String rank) {
+		filme = filme.stream().filter(f -> f.getRank().equals(rank)).collect(Collectors.toList());
+		return filme;
+	}
+
+	public static List<Filme> captaPorTitulo(List<Filme> filmes, String titulo) {
+		filmes = filmes.stream().filter(f -> f.getTitle().contains(titulo)).collect(Collectors.toList());
+		filmes.forEach(f->System.out.println(f.getTitle()));
+		return filmes;
 	}
 
 }

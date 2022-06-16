@@ -2,7 +2,7 @@ package desafioalura.setediasdecodigo.models;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public class Filme {
+public class Filme implements Comparable<Filme>{
 
 	private final String id;
 	@JsonProperty("rank")
@@ -71,6 +71,16 @@ public class Filme {
 	@Override
 	public String toString() {
 		return "Filme: " + title + ", Url da imagem: " + image;
+	}
+
+	@Override
+	public int compareTo(Filme outroFilme) {
+		
+		long esteRank = Long.parseLong(this.rank);
+		long outroRank = Long.parseLong(outroFilme.getRank());
+		if (esteRank > outroRank) {
+			return 1;
+		} return -1;		
 	}
 
 }

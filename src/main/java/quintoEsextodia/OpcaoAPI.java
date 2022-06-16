@@ -1,10 +1,6 @@
 package quintoEsextodia;
 
-import java.io.BufferedReader;
-import java.io.FileInputStream;
-import java.io.InputStreamReader;
-
-import segundodia.CaptaJsonAPI;
+import setimodia.CarregaUrl;
 
 public enum OpcaoAPI {
 
@@ -12,13 +8,8 @@ public enum OpcaoAPI {
 		@Override
 		public String parseString() {
 			try {
-				url = new FileInputStream("url.txt");
-			InputStreamReader converte = new InputStreamReader(url);
-			BufferedReader armazena = new BufferedReader(converte);
-			String linha = armazena.readLine();
-			String string = new CaptaJsonAPI(linha).getBody();
-			return string;
-			}catch (Exception e) {
+				return url = new CarregaUrl(0).parseString();
+			} catch (Exception e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
@@ -29,13 +20,8 @@ public enum OpcaoAPI {
 		@Override
 		public String parseString() {
 			try {
-				url = new FileInputStream("url2.txt");
-			InputStreamReader converte = new InputStreamReader(url);
-			BufferedReader armazena = new BufferedReader(converte);
-			String linha = armazena.readLine();
-			String string = new CaptaJsonAPI(linha).getBody();
-			return string;
-			}catch (Exception e) {
+				return url = new CarregaUrl(1).parseString();
+			} catch (Exception e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
@@ -44,5 +30,6 @@ public enum OpcaoAPI {
 	};
 
 	public abstract String parseString();
-	public FileInputStream url = null;
+
+	public String url = null;
 }

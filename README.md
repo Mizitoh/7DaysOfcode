@@ -19,6 +19,8 @@ Desafio de 7 dias de código da Alura
 
 6° Usar mais de uma API.
 
+7° Comparator de list de API.
+
 # Funcionalidades
 
 Até agora estamos consumnindo uma API.
@@ -33,6 +35,8 @@ Foram alteradas diversar classes e o layout do HTML, deixando o código mais lim
 Ainda penso que posso melhorar o controlador.
 Adiantei o dia seis criando um Enum (baseado no padrão method template) que seleciona e altera o método de carregar e parsear 
 de acordo com os diferentes arquivos txt onde guardei minhas chaves.
+Fim do sétimo dia, classes mais genéricas para exibir futuras noavas API's e telas para pesquisar por ranking e por título
+com uso de Comparable.
 
 # Tecnologias utilizadas:
 
@@ -49,6 +53,7 @@ de acordo com os diferentes arquivos txt onde guardei minhas chaves.
 
 <hr>
 
+<img src = "https://github.com/Mizitoh/codeimages/blob/master/7daysofcodeFinal.png" width = 100% padding = 10>
 <img src ="https://github.com/Mizitoh/codeimages/blob/master/7daysofcodeConsole.png" width = 40%> <img src ="https://github.com/Mizitoh/codeimages/blob/master/7daysofcodeJson.png" width = 40%> 
 <img src ="https://github.com/Mizitoh/codeimages/blob/master/7daysofcodeTituloString.png" width = 25%> <img src ="https://github.com/Mizitoh/codeimages/blob/master/7daysofcodeUrlImageString.png" width = 70% padding = 10>
 <img src = "https://github.com/Mizitoh/codeimages/blob/master/7daysofcodeHTML.png" width = 100% padding = 10>
